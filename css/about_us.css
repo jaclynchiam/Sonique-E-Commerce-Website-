@@ -1,466 +1,252 @@
-/* Reset default margins and paddings */
-html, body {
+/* ==========================================
+   About Us Page: Modernized Stylesheet
+   ================================---------- */
+
+   body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    background-color: #f9fafb;
     margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #E5E4E2;
-
+    -webkit-font-smoothing: antialiased;
 }
 
-.page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    align-items: stretch;
-}
+/* Hero banner: margin-top matches fixed nav height */
 
-/* Set this to match the nav height, to prevent the content being hidden because of position fixed at nav bar */
-header, main {
-    margin-top: 50px; /* Match nav height */
-    padding: 10px 20px;
-}
-
-main {
-    flex: 1;
-    padding: 20px;
-}
-
-
-.header {
-    display: flex;
-    height:200px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #0e0433;
-    color: white;
-    font-size: 34px;
-    text-align: center;
-    padding: 20px;
-  }
-  
-
-/* Navigation bar styles */
-.nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    overflow: hidden;
-    background-color: #0e0433;
-    color: white;
-    height: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.nav-left, .nav-center, .nav-right {
-    min-width: 0;
-    flex-shrink: 1;
-}
-
-.nav-left {
-    padding: 1%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    padding-left:20px;
-}
-
-.nav-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px; /* Spacing between each link */
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-    flex-wrap: wrap;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-right: 1%;
-}
-
-.sign-in {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 50px;
-    width: 80px;
-    cursor: pointer;
-}
-
-.add-to-card, .userprofile {
-    margin-top: 5px;
-}
-
-.userprofile {
-    margin-right: 2px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-}
-
-/* Footer styles */
-footer {
-    background-color: #D9D9D9;
-}
-
-.footer-flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-shrink: 0; /* Prevent shrinking if the screen size becomes smaller */
-    font-family: 'Poppins', sans-serif;  
-}
-
-.footer-flextop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.footer-section {
-    width: 200px;
-    margin-right: 20px;
-    padding-left: 5px;
-}
-
-.footer-section ul li {
-    margin-bottom: 8px;
-}
-
-.footer-flex a {
-    text-decoration: none;
-    color: black;
-}
-
-.footer-flex ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-.footer-flex-middle {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding: 10px 20px;
-}
-
-.newsletter {
-    max-width: 300px; /* Smaller width */
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800; /* Extra bold */
-    color: #0E0433;
-    font-size: 16px;
-    margin-left: auto; /* Align right */
-}
-
-.newsletter-input {
-    display: flex;
-    margin-top: 6px;
-}
-
-.newsletter-input input {
-    flex: 1;
-    padding: 6px 8px;
-    font-size: 14px;
-    border: 1px solid #888;
-    border-right: none;
-}
-
-.newsletter-input button {
-    padding: 6px 10px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.footer-flex-bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.copyright-footer {
-    height: 30px;
-    background-color: black;
-    color: white;
-    text-align: left;
-    padding-top: 5px; /* Prevent shrinking */
-    padding-left: 10px;
-}
-
-.footer-bottom-right {
-    /* Flex it to let the connect us and icons appear on the same line */
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 10px; /* Spacing between icons */
-    margin-right: 10px;
-}
-
-.footer-section ul li {
-    font-weight: 500; /* Regular */
-    font-size: 14px;
-}
-
-.footer-section {
-    margin-left: 10px;
-}
-
-.contact-us {
-    margin-left: 10px;
-}
-
-.footer-icon {
-    margin-top: 10px;
-}
-
-/* Responsive media queries */
-@media (max-width: 1024px) {
-    .nav {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 10px 0;
-    }
-
-    .nav-center {
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: center;
-        margin-left: 0;
-        gap: 30px;
-    }
-
-    .nav-right {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-right: 0;
-        gap: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-center {
-        gap: 30px;
-    }
-}
-
-/* Hover effect CSS pseudo class */
-.footer-section ul li:hover {
-    text-decoration: underline;
-    color: #003262;
-}
-
-.footer-section {
-    margin-left: 10px;
-}
-
-.nav-center a:hover {
-    color: grey;
-    transition: color 0.3s ease;
-}
-
-.nav-left a:hover {
-    color: grey;
-}
-
-.footer-heading:hover {
-    color: #003262;
-}
-
-.sign-in {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 50px;
-    width: 80px;
-    cursor: pointer;
-    background-color: #ffffff;
-    color: #0e0433;
-    transition: all 0.2s ease;
-    box-shadow: none;
-}
-
-/* Hover effect */
-.sign-in:hover {
-    background-color: #f0f0f0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Click/Active effect */
-.sign-in:active {
-    background-color: #4666FF; /* Rich purple */
-    color: #fff;
-    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
-    transform: scale(0.96);
-}
 
 /* Header Image Section */
+/* Header Image / Hero Section */
 .header-image {
     position: relative;
-    background-image: url('images/about_us/main_header.png');
-    width: 100%; /* Ensures the container spans the full width of the viewport */
-    height: 537px; /* Fixed height for the header image section */
-    background-size: cover; /* Stretches the image to cover the entire container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
+    background-color: #0e0433;
+    width: 100%;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white; /* Text color for visibility */
+    text-align: center;
+    color: white;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.4);
 }
 
-.heading_one{
-    color: #000;
-    font-family: Inter;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    padding: 3%
+/* Container for text to stack vertically */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between ABOUT and SONIQUE */
 }
 
-/* Container for the brand section */
+/* "ABOUT" styling - clean, tracked out, modern */
+.header-image h1 {
+    font-size: 3rem;          /* Much larger */
+    font-weight: 300;         /* Light weight for modern contrast */
+    letter-spacing: 6px;      /* Spreads the letters out for a luxury look */
+    margin: 0;
+    color: #cbd5e1;           /* Soft silver/white */
+}
+
+/* "SONIQUE" styling - ultra-bold and prominent */
+.header-image h2 {
+    font-size: 5rem;          /* Massive and impactful */
+    font-weight: 800;         /* Extra bold */
+    letter-spacing: 3px;
+    margin: 0;
+    color: #ffffff;           /* Pure white */
+    text-transform: uppercase;
+}
+
+
+/* Main content container */
+.about-main {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    box-sizing: border-box;
+}
+
+/* Brand Section: Modern Card Container */
 .brand-section {
     display: flex;
-    gap: 120px; /* Space between image and text */
-    align-items: center; /* Vertically center the image and text */
-    margin: -30px 0px; /* Add some spacing above and below */
-    padding-left: 2%;
-    padding-bottom: 100px;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
-/* Image styling */
-.brand-image {
-    max-width: 100%; /* Ensure the image scales responsively */
-    height: auto; /* Maintain aspect ratio */
-    border: 2px solid #000; /* Optional: Add a border around the image */
-    margin-left: 1%;
+.brand-section .brand-image {
+    flex: 0 0 45%;
+    max-width: 45%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Text box styling */
 .brand_desc {
-    padding: 20px; /* Padding inside the text box */
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.5; /* Adjust line height for readability */
-    max-width: 40%; /* Limit the width of the text box for responsiveness */
-    margin-left: -100px;
+    flex: 1;
+    margin: 0;
+    color: #4b5563;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
 }
 
-.founders_title{
-    color: #000;
-    font-family: Inter;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    padding-left: 2%;
-    margin-left: 1%;
+/* Founders Section Header */
+.founders_title {
+    position: relative;
+    margin: 0 0 50px;
+    color: #111827;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.5px;
 }
 
+.founders_title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #6366f1;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* Founders Cards */
 .founders_details {
     display: flex;
-    gap: 120px; /* Space between image and text */
-    align-items: center; /* Vertically center the image and text */
-    margin: 10px 0px; /* Add some spacing above and below */
-    padding-left: 2%;
-    padding-bottom: 3%;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.founders_details img{
-    width: 500px;
-    height: 500px;
-    margin-left: 1%;
+.founders_details:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07);
 }
 
-.founders_text{
-    padding: 20px; /* Padding inside the text box */
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.5; /* Adjust line height for readability */
-    max-width: 50%; /* Limit the width of the text box for responsiveness */
+/* Alternate layout: make every even founder card flip image to the right */
+.founders_details:nth-of-type(even) {
+    flex-direction: row-reverse;
 }
 
+.founders_details img {
+    flex: 0 0 280px;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.founders_text {
+    flex: 1;
+    margin: 0;
+    color: #4b5563;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Tablet and Mobile Responsiveness */
 @media (max-width: 768px) {
-    
-    .brand-section, .founders_details {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 15px;
+    .header-image img {
+        height: 250px;
     }
-  
-    .brand-image {
-      width: 80%;
-      height: auto;
-      margin-bottom: 15px;
+
+    .about-main {
+        padding: 40px 16px;
     }
-  
-    .brand_desc, .founders_text {
-      font-size: 14px;
-      padding: 10px;
+
+    .brand-section {
+        flex-direction: column !important;
+        padding: 24px;
+        gap: 30px;
+        margin-bottom: 60px;
     }
-  
-    .footer-flextop, .footer-flex-middle, .footer-flex-bottom {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+
+    .brand-section .brand-image {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+        height: 280px;
     }
-  
+
+    .founders_details,
+    .founders_details:nth-of-type(even) {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: left;
+        gap: 24px;
+        padding: 24px;
+        margin-bottom: 30px;
+    }
+
+    .founders_details img {
+        flex: none;
+        width: 100%;
+        max-width: 280px;
+        height: 280px;
+    }
+
+    .brand_desc,
+    .founders_text {
+        font-size: 15px;
+    }
+
+    .founders_title {
+        font-size: 26px;
+        margin-bottom: 35px;
+    }
+
+    /* Footer stacking adjustments */
+    .footer-flextop,
+    .footer-flex-middle,
+    .footer-flex-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .footer-section,
     .chatbox,
     .newsletter,
     .contact-us,
     .footer-bottom-right {
-      width: 100%;
-      margin-bottom: 20px;
+        width: 100%;
+        margin: 0 0 20px;
+        padding-left: 0;
+        box-sizing: border-box;
     }
-  
+
     .newsletter-input {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .newsletter-input input {
-      width: 100%;
-      margin-bottom: 10px;
+        width: 100%;
+        margin-bottom: 10px;
     }
-  
+
     .newsletter-input button {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .footer-bottom-right img {
-      margin: 0 5px;
+        margin: 0 5px;
     }
-  }
+}
   
 
